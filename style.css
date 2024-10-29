@@ -1,0 +1,142 @@
+/* Base styles for desktop */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #202124;
+    color: #e8eaed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    padding: 20px;
+    text-align: right;
+}
+.header-link {
+    color: #e8eaed;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    font-size: 90px;
+    color: #8ab4f8;
+    margin-bottom: 20px;
+}
+.search-bar {
+    background-color: #303134;
+    border-radius: 24px;
+    width: 561px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+.search-bar input {
+    background-color: transparent;
+    border: none;
+    color: #e8eaed;
+    font-size: 16px;
+    flex-grow: 1;
+    outline: none;
+}
+.search-icon, .mic-icon, .camera-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+.shortcuts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+.shortcut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px 20px;
+    text-decoration: none;
+    color: #e8eaed;
+}
+.shortcut-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #35363a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.shortcut span {
+    font-size: 13px;
+}
+footer {
+    padding: 20px;
+    text-align: right;
+}
+.customize {
+    color: #8ab4f8;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 60px;
+    }
+    .search-bar {
+        width: 90%;
+        height: 40px;
+    }
+    .header-link {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .shortcuts {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .shortcut {
+        margin: 0 5px 15px;
+    }
+    .shortcut-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        text-align: center;
+        padding: 10px;
+    }
+    .logo {
+        font-size: 50px;
+    }
+    .search-bar {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .shortcuts {
+        flex-direction: column;
+        align-items: center;
+    }
+    .shortcut {
+        margin: 10px 0;
+    }
+}
